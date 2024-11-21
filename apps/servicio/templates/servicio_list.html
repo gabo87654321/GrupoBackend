@@ -1,0 +1,13 @@
+{% block content %}
+<h1>Lista de Servicios</h1>
+<a href="{% url 'servicio:servicio_create' %}">Crear nuevo servicio</a>
+<ul>
+    {% for servicio in servicios %}
+        <li>
+            {{ servicio.nombre }} - {{ servicio.precio }}
+            <a href="{% url 'servicio_update' servicio.pk %}">Editar</a>
+            <a href="{% url 'servicio_delete' servicio.pk %}">Eliminar</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock  %} 

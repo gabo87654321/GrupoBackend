@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Eliminar Profesional</h1>
+<p>¿Estás seguro de que deseas eliminar al profesional {{ object.nombre }} {{ object.apellido }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sí, eliminar</button>
+</form>
+<a href="{% url 'profesional:listar_profesionales' %}">Cancelar</a>
+{% endblock %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Eliminar Profesional</h1>
+<p>¿Estás seguro de que deseas eliminar al profesional {{ object.nombre }} {{ object.apellido }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sí, eliminar</button>
+</form>
+<a href="{% url 'profesional:listar_profesionales' %}">Cancelar</a>
+{% endblock %}

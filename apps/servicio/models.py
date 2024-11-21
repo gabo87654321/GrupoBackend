@@ -6,7 +6,9 @@ class Servicio(models.Model):
     descripcion = models.TextField(blank=True, null=True)
     duracion_estimada = models.PositiveIntegerField(help_text="Duración en minutos")
     precio = models.DecimalField(max_digits=10, decimal_places=2)
-    profesionales = models.ManyToManyField("profesional.Profesional", related_name="servicios")
+    profesionales = models.ManyToManyField("profesional.Profesional", related_name="servicio")
 
     def __str__(self):
         return self.nombre
+    
+    

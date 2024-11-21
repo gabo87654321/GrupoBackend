@@ -1,0 +1,14 @@
+{% block content %}
+<h1>Lista de Turnos</h1>
+<a href="{% url 'turno:turno_create' %}">Crear nuevo turno</a>
+<ul>
+    {% for turno in turnos %}
+        <li>
+            Turno de {{ turno.usuario.username }} con {{ turno.profesional }} el {{ turno.fecha }} a las {{ turno.hora }}
+            (Estado: {{ turno.estado }})
+            <a href="{% url 'turno:turno_update' turno.pk %}">Editar</a>
+            <a href="{% url 'turno:turno_delete' turno.pk %}">Eliminar</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

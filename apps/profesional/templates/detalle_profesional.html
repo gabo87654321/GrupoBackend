@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Detalle del Profesional</h1>
+<p><strong>Nombre:</strong> {{ profesional.nombre }}</p>
+<p><strong>Apellido:</strong> {{ profesional.apellido }}</p>
+<p><strong>Email:</strong> {{ profesional.email }}</p>
+<p><strong>Teléfono:</strong> {{ profesional.telefono }}</p>
+<p><strong>Especialidad:</strong> {{ profesional.especialidad }}</p>
+<a href="{% url 'profesional:listar_profesionales' %}">Volver a la lista</a>
+{% endblock %}
