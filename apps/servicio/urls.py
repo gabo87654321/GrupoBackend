@@ -13,7 +13,7 @@ urlpatterns = [
     path('', ServicioListView.as_view(), name='servicio_list'),
 
     # Crear un nuevo servicio
-    path('/', ServicioCreateView.as_view(), name='servicio_create'),
+    path('create/', ServicioCreateView.as_view(), name='servicio_create'),
 
     # Editar un servicio existente
     path('<int:pk>/editar/', ServicioUpdateView.as_view(), name='servicio_update'),
